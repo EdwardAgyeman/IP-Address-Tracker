@@ -42,6 +42,19 @@ button {
     color: white;
 }
 
+main {
+    position: relative;
+}
 #dashboard {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 80%;
+    height: 100px;
 
+    /* margin: 0 auto; */
+    border-radius: 10px;
+    padding: 5px 10px;
+    /* add a shadow effect */
 }
