@@ -1,0 +1,44 @@
+* {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 30vh;
+    background-image: url(../images/pattern-bg.png);
+    text-align: center;
+}
+main {
+    height: 70vh;
+    background-color: gainsboro;
+}
+h1 {
+    color: white;
+    font-weight: 700;
+}
+form {
+    position: relative;
+    display: inline-block;
+}
+input {
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    border: initial;
+    padding: 5px 10px;
+}
+button {
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    border-radius: 0 10px 10px 0;
+    border: initial;
+    position: absolute;
+    right: 0;
+    color: white;
+}
+
+#dashboard {
+
+}
