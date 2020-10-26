@@ -7,7 +7,9 @@
 header {
     height: 30vh;
     background-image: url(../images/pattern-bg.png);
+    background-repeat: no-repeat;
     text-align: center;
+    padding: 20px;
 }
 main {
     height: 70vh;
@@ -16,6 +18,7 @@ main {
 h1 {
     color: white;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 form {
     position: relative;
