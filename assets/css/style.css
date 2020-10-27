@@ -10,10 +10,6 @@ header {
     text-align: center;
     padding: 20px;
 }
-main {
-    height: 70vh;
-    background-color: gainsboro;
-}
 h1 {
     color: white;
     font-weight: 700;
@@ -29,6 +25,7 @@ input {
     border-radius: 10px;
     border: initial;
     padding: 5px 10px;
+    outline: none;
 }
 button {
     background-color: black;
@@ -39,32 +36,50 @@ button {
     position: absolute;
     right: 0;
     color: white;
+    outline: none;
 }
 button:hover {
     background-color: rgb(63, 63, 63);
 }
+
 main {
+    height: 70vh;
     position: relative;
 }
+#mapid { height: 70vh; }
 #dashboard {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
     width: 80%;
-    height: 100px;
+    min-height: 90px;
+    height: auto;
     border-radius: 10px;
     padding: 10px;
     display: flex;
     justify-content: space-around;
+    z-index: 2;
     /* add a shadow effect */
 }
+/* #dashboard > div::after {
+    content: "";
+    width: 5px;
+    height: 90px;
+    background-color: hsl(0, 0%, 59%);
+} */
 .dashboard-output {
     margin-top: 20px;
     font-weight: 700;
     font-size: 1.3rem;
+    width: 100px;
 }
 h2 {
     color: hsl(0, 0%, 59%);
     font-size: 0.7rem;
+}
+
+/* ========================================Map======================================== */
+#mapid {
+    z-index: 1;
 }
