@@ -1,4 +1,3 @@
-// ========================================Map Set Up========================================
 var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 var marker = L.marker([51.5, -0.09]).addTo(mymap);
 
@@ -15,16 +14,20 @@ let userInput = document.querySelector("input");
 let form = document.querySelector("form");
 
 form.addEventListener("submit", function(event) {
+
     event.preventDefault();
-    // add validation ip address format required using reg ex "Please enter valid IP" CSS hidden
+
+    // IP Address Validation:
+    let regex = /\d\.\d\.\d\.\d/
+
+    if(regex.test(userInput.value)) {
     fetch(`https://geo.ipify.org/api/v1?apiKey=at_nSwsJjV340Nc9JurI3BAWK8Lq5uJ9&ipAddress=${userInput.value}`)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            // console.log(data)
             let ipAddress = document.querySelector("#ip-address");
             let loCation = document.querySelector("#location");
             let timezone = document.querySelector("#timezone");
-            // let utc = document.querySelector("#utc");
             let isp = document.querySelector("#isp");
 
             // pass data to the DOM Elements
@@ -36,8 +39,8 @@ form.addEventListener("submit", function(event) {
             mymap.setView([data.location.lat, data.location.lng], 13)
             marker = L.marker([data.location.lat, data.location.lng]).addTo(mymap);
         })
-        .catch(error => console.log("ERROR! Something went wrong!"))
+        // .catch(error => console.log("ERROR! Something went wrong!"))
+    } else {
+        document.getElementById("invalid").style.visibility = "visible"
+    }
 })
-
-console.log(mymap)
-console.log(L)
