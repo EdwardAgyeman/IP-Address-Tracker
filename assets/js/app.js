@@ -18,7 +18,7 @@ form.addEventListener("submit", function(event) {
     event.preventDefault();
 
     // IP Address Validation:
-    let regex = /\d\.\d\.\d\.\d/
+    let regex = /[0-9]{1,4}.[0-9]{1,4}.[0-9]{1,4}.[0-9]{1,4}/
 
     if(regex.test(userInput.value)) {
     fetch(`https://geo.ipify.org/api/v1?apiKey=at_nSwsJjV340Nc9JurI3BAWK8Lq5uJ9&ipAddress=${userInput.value}`)
