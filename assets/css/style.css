@@ -66,10 +66,13 @@ main {
     z-index: 2;
     /* add a shadow effect */
 }
-/* #dashboard > div::after {
+/* #dashboard > div {position: relative;} 
+#dashboard > div::before {
+    position: absolute;
+    left: -40%;
     content: "";
-    width: 5px;
-    height: 90px;
+    width: 1px;
+    height: 90%;
     background-color: hsl(0, 0%, 59%);
 } */
 .dashboard-output {

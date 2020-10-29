@@ -21,6 +21,7 @@ form.addEventListener("submit", function(event) {
     let regex = /[0-9]{1,4}.[0-9]{1,4}.[0-9]{1,4}.[0-9]{1,4}/
 
     if(regex.test(userInput.value)) {
+        document.getElementById("invalid").style.visibility = "hidden"
     fetch(`https://geo.ipify.org/api/v1?apiKey=at_nSwsJjV340Nc9JurI3BAWK8Lq5uJ9&ipAddress=${userInput.value}`)
         .then(response => response.json())
         .then(data => {
