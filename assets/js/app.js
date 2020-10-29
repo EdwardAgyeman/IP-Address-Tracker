@@ -39,7 +39,7 @@ form.addEventListener("submit", function(event) {
             mymap.setView([data.location.lat, data.location.lng], 13)
             marker = L.marker([data.location.lat, data.location.lng]).addTo(mymap);
         })
-        // .catch(error => console.log("ERROR! Something went wrong!"))
+        .catch(error => document.getElementById("invalid").style.visibility = "visible")
     } else {
         document.getElementById("invalid").style.visibility = "visible"
     }
